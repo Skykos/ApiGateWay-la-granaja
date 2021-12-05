@@ -7,6 +7,7 @@ const authentication = require('./utils/authentication');
 
 
 const server = new ApolloServer({
+    context:authentication,
     typeDefs,
     resolvers,
     dataSources: ()=>({
